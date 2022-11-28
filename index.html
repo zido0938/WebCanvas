@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>웹프로그래밍 그림판 만들기</title>
+  </head>
+  <body>
+    <div class="controls__btns_s">
+      
+      
+      <input type="file" name="img" size="65" id="uploadimage" />
+      <button id="jsSave">저장</button>
+      <button id="jsAnim">애니메이션</button>
+    </div>
+    <canvas id="jsCanvas" class="canvas"></canvas>
+    <nav class="controls__btns" id="controls__btns">
+        <a class="menu_" id="jsFill">채우기</a>
+        <a class="menu_" id="jsPaint">붓</a>
+        <a class="menu_" id="jsRect">사각형</a>
+        <a class="menu_" id="jsCircle">원</a>
+        <a class="menu_" id="jsTriangle">삼각형</a>
+        <a class="menu_" id="jsErase">지우개</a>
+        <a class="menu_" id="jsReset">전체 지우기</a>
+        
+    </nav>
+    <div class="controls">
+      <div id="jsCheck" class="check"></div>
+      <div class="controls__range">
+        <input
+          type="range"
+          id="jsRange"
+          min="0.1"
+          max="10.0"
+          value="5.0"
+          step="0.1"
+        />
+        <br />
+        <!--opacity-->
+        <input
+          type="range"
+          id="jsOpacity"
+          min="0"
+          max="1.0"
+          value="1.0"
+          step="0.01"
+        />
+        <!--opacity-->
+      </div>
+      <div class="controls__colors" id="jsColors">
+        <div class="custom__color">
+          <input type="color" id="jsColorCustom" />
+        </div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: white"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #2c2c2c"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #ff3b30"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #ff9500"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #ffcc00"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #4cd963"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #5ac8fa"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #0579ff"
+        ></div>
+        <div
+          class="controls__color jsColor"
+          style="background-color: #5856d6"
+        ></div>
+      </div>
+      <div class="cursor cursor_range"></div>
+    </div>
+    <div class="controls__size">
+      <form class="controls__width">
+        <input
+          type="number"
+          id="canvas__width"
+          placeholder="Width"
+          value="700"
+          min="200"
+          max="2000"
+        />
+      </form>
+      <form class="controls__height">
+        <input
+          type="number"
+          id="canvas__height"
+          placeholder="height"
+          value="700"
+          min="200"
+          max="2000"
+        />
+      </form>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
